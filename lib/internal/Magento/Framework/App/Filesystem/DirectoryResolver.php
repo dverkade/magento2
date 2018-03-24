@@ -52,8 +52,8 @@ class DirectoryResolver
     {
         $directory = $this->filesystem->getDirectoryWrite($directoryConfig);
         $realPath = $directory->getDriver()->getRealPathSafety($path);
-        $root = $this->directoryList->getPath($directoryConfig);
-        
+        $root = realpath($this->directoryList->getPath($directoryConfig));
+
         return strpos($realPath, $root) === 0;
     }
 }
