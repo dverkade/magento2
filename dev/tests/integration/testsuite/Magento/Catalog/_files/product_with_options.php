@@ -11,6 +11,8 @@ $product = $objectManager->create(\Magento\Catalog\Model\Product::class);
 
 $product->setTypeId(
     'simple'
+)->setId(
+    1
 )->setAttributeSetId(
     4
 )->setWebsiteIds(
@@ -36,7 +38,8 @@ $product->setTypeId(
 )->setStockData(
     [
         'qty' => 100,
-        'is_in_stock' => 1
+        'is_in_stock' => 1,
+        'manage_stock' => 1,
     ]
 )->setHasOptions(true);
 
