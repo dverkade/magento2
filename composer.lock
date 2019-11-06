@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0eca7aabf215b503b570a389ff88760a",
+    "content-hash": "6cc44487f067aa3dff244f2ca8a12280",
     "packages": [
         {
             "name": "braintree/braintree_php",
@@ -560,24 +560,30 @@
         },
         {
             "name": "league/climate",
-            "version": "2.6.1",
+            "version": "3.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/climate.git",
-                "reference": "28851c909017424f61cc6a62089316313c645d1c"
+                "reference": "d657a19837c1f79a891381fb128b755aa3386381"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/climate/zipball/28851c909017424f61cc6a62089316313c645d1c",
-                "reference": "28851c909017424f61cc6a62089316313c645d1c",
+                "url": "https://api.github.com/repos/thephpleague/climate/zipball/d657a19837c1f79a891381fb128b755aa3386381",
+                "reference": "d657a19837c1f79a891381fb128b755aa3386381",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4.0"
+                "php": "^5.6|^7.0",
+                "psr/log": "^1.0",
+                "seld/cli-prompt": "^1.0"
             },
             "require-dev": {
-                "mockery/mockery": "dev-master",
-                "phpunit/phpunit": "4.1.*"
+                "mikey179/vfsstream": "^1.4",
+                "mockery/mockery": "^1.0",
+                "phpunit/phpunit": "^5.7.16"
+            },
+            "suggest": {
+                "ext-mbstring": "If ext-mbstring is not available you MUST install symfony/polyfill-mbstring"
             },
             "type": "library",
             "autoload": {
@@ -590,6 +596,12 @@
                 "MIT"
             ],
             "authors": [
+                {
+                    "name": "Craig Duncan",
+                    "email": "git@duncanc.co.uk",
+                    "homepage": "https://github.com/duncan3dc",
+                    "role": "Developer"
+                },
                 {
                     "name": "Joe Tannenbaum",
                     "email": "hey@joe.codes",
@@ -605,7 +617,7 @@
                 "php",
                 "terminal"
             ],
-            "time": "2015-01-18T14:31:58+00:00"
+            "time": "2018-04-29T16:43:54+00:00"
         },
         {
             "name": "magento/composer",
@@ -962,12 +974,12 @@
             "version": "v0.1.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jjriv/emogrifier.git",
+                "url": "https://github.com/MyIntervals/emogrifier.git",
                 "reference": "ed72bcd6a3c7014862ff86d026193667a172fedf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jjriv/emogrifier/zipball/ed72bcd6a3c7014862ff86d026193667a172fedf",
+                "url": "https://api.github.com/repos/MyIntervals/emogrifier/zipball/ed72bcd6a3c7014862ff86d026193667a172fedf",
                 "reference": "ed72bcd6a3c7014862ff86d026193667a172fedf",
                 "shasum": ""
             },
@@ -1426,33 +1438,33 @@
         },
         {
             "name": "sjparkinson/static-review",
-            "version": "4.1.1",
+            "version": "5.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sjparkinson/static-review.git",
-                "reference": "493c3410cf146a12fca84209bad126c494e125f0"
+                "reference": "5720c8d488dfbc49a4629196588f75508e1d0c42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sjparkinson/static-review/zipball/493c3410cf146a12fca84209bad126c494e125f0",
-                "reference": "493c3410cf146a12fca84209bad126c494e125f0",
+                "url": "https://api.github.com/repos/sjparkinson/static-review/zipball/5720c8d488dfbc49a4629196588f75508e1d0c42",
+                "reference": "5720c8d488dfbc49a4629196588f75508e1d0c42",
                 "shasum": ""
             },
             "require": {
-                "league/climate": "~2.0",
-                "php": ">=5.4.0",
-                "symfony/console": "~2.0",
-                "symfony/process": "~2.0"
+                "league/climate": "^2.0 || ^3.0",
+                "php": "^5.5 || ^7.0",
+                "symfony/console": "^2.0",
+                "symfony/process": "^2.1"
             },
             "require-dev": {
-                "mockery/mockery": "~0.9",
-                "phpunit/phpunit": "~4.0",
-                "sensiolabs/security-checker": "~2.0",
-                "squizlabs/php_codesniffer": "~1.0"
+                "mockery/mockery": "^0.9",
+                "phpunit/phpunit": "^4.6 || ^5.0",
+                "sensiolabs/security-checker": "^3.0",
+                "squizlabs/php_codesniffer": "^2.2"
             },
             "suggest": {
-                "sensiolabs/security-checker": "Required for ComposerSecurityReview.",
-                "squizlabs/php_codesniffer": "Required for PhpCodeSnifferReview."
+                "sensiolabs/security-checker": "required by ComposerSecurityReview.",
+                "squizlabs/php_codesniffer": "required by PhpCodeSnifferReview."
             },
             "bin": [
                 "bin/static-review.php"
@@ -1475,7 +1487,8 @@
                 }
             ],
             "description": "An extendable framework for version control hooks.",
-            "time": "2014-09-22T08:40:36+00:00"
+            "abandoned": "phpro/grumphp",
+            "time": "2017-11-28T09:16:58+00:00"
         },
         {
             "name": "symfony/console",
@@ -4935,6 +4948,7 @@
                 "mock",
                 "xunit"
             ],
+            "abandoned": true,
             "time": "2017-08-03T14:08:16+00:00"
         },
         {
