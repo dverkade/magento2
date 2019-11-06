@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0eca7aabf215b503b570a389ff88760a",
+    "content-hash": "d1c13636ca2d5f8b57b9ed4e268bce69",
     "packages": [
         {
             "name": "braintree/braintree_php",
@@ -962,12 +962,12 @@
             "version": "v0.1.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jjriv/emogrifier.git",
+                "url": "https://github.com/MyIntervals/emogrifier.git",
                 "reference": "ed72bcd6a3c7014862ff86d026193667a172fedf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jjriv/emogrifier/zipball/ed72bcd6a3c7014862ff86d026193667a172fedf",
+                "url": "https://api.github.com/repos/MyIntervals/emogrifier/zipball/ed72bcd6a3c7014862ff86d026193667a172fedf",
                 "reference": "ed72bcd6a3c7014862ff86d026193667a172fedf",
                 "shasum": ""
             },
@@ -1475,6 +1475,7 @@
                 }
             ],
             "description": "An extendable framework for version control hooks.",
+            "abandoned": "phpro/grumphp",
             "time": "2014-09-22T08:40:36+00:00"
         },
         {
@@ -2180,36 +2181,37 @@
         },
         {
             "name": "zendframework/zend-crypt",
-            "version": "2.6.0",
+            "version": "3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-crypt.git",
-                "reference": "1b2f5600bf6262904167116fa67b58ab1457036d"
+                "reference": "cf23da2731dabdbb916cf888f611fc0f123bd36b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-crypt/zipball/1b2f5600bf6262904167116fa67b58ab1457036d",
-                "reference": "1b2f5600bf6262904167116fa67b58ab1457036d",
+                "url": "https://api.github.com/repos/zendframework/zend-crypt/zipball/cf23da2731dabdbb916cf888f611fc0f123bd36b",
+                "reference": "cf23da2731dabdbb916cf888f611fc0f123bd36b",
                 "shasum": ""
             },
             "require": {
-                "container-interop/container-interop": "~1.0",
-                "php": "^5.5 || ^7.0",
-                "zendframework/zend-math": "^2.6",
-                "zendframework/zend-stdlib": "^2.7 || ^3.0"
+                "container-interop/container-interop": "^1.2",
+                "ext-mbstring": "*",
+                "php": "^5.6 || ^7.0",
+                "zendframework/zend-math": "^3.0",
+                "zendframework/zend-stdlib": "^2.7.7 || ^3.1"
             },
             "require-dev": {
-                "fabpot/php-cs-fixer": "1.7.*",
-                "phpunit/phpunit": "~4.0"
+                "phpunit/phpunit": "^5.7.27 || ^6.5.8 || ^7.1.2",
+                "zendframework/zend-coding-standard": "~1.0.0"
             },
             "suggest": {
-                "ext-mcrypt": "Required for most features of Zend\\Crypt"
+                "ext-openssl": "Required for most features of Zend\\Crypt"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.6-dev",
-                    "dev-develop": "2.7-dev"
+                    "dev-master": "3.3.x-dev",
+                    "dev-develop": "3.4.x-dev"
                 }
             },
             "autoload": {
@@ -2221,12 +2223,13 @@
             "license": [
                 "BSD-3-Clause"
             ],
-            "homepage": "https://github.com/zendframework/zend-crypt",
+            "description": "Strong cryptography tools and password hashing",
             "keywords": [
+                "ZendFramework",
                 "crypt",
-                "zf2"
+                "zf"
             ],
-            "time": "2016-02-03T23:46:30+00:00"
+            "time": "2019-05-14T20:19:53+00:00"
         },
         {
             "name": "zendframework/zend-db",
@@ -3024,36 +3027,36 @@
         },
         {
             "name": "zendframework/zend-math",
-            "version": "2.7.0",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-math.git",
-                "reference": "f4358090d5d23973121f1ed0b376184b66d9edec"
+                "reference": "fda3b4e6c3bb15c35adc6db38b2eacabaa243e65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-math/zipball/f4358090d5d23973121f1ed0b376184b66d9edec",
-                "reference": "f4358090d5d23973121f1ed0b376184b66d9edec",
+                "url": "https://api.github.com/repos/zendframework/zend-math/zipball/fda3b4e6c3bb15c35adc6db38b2eacabaa243e65",
+                "reference": "fda3b4e6c3bb15c35adc6db38b2eacabaa243e65",
                 "shasum": ""
             },
             "require": {
+                "ext-mbstring": "*",
+                "paragonie/random_compat": "^2.0.2",
                 "php": "^5.5 || ^7.0"
             },
             "require-dev": {
                 "fabpot/php-cs-fixer": "1.7.*",
-                "ircmaxell/random-lib": "~1.1",
                 "phpunit/phpunit": "~4.0"
             },
             "suggest": {
                 "ext-bcmath": "If using the bcmath functionality",
-                "ext-gmp": "If using the gmp functionality",
-                "ircmaxell/random-lib": "Fallback random byte generator for Zend\\Math\\Rand if Mcrypt extensions is unavailable"
+                "ext-gmp": "If using the gmp functionality"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.7-dev",
-                    "dev-develop": "2.8-dev"
+                    "dev-master": "3.0-dev",
+                    "dev-develop": "3.1-dev"
                 }
             },
             "autoload": {
@@ -3070,7 +3073,7 @@
                 "math",
                 "zf2"
             ],
-            "time": "2016-04-07T16:29:53+00:00"
+            "time": "2016-04-28T17:37:42+00:00"
         },
         {
             "name": "zendframework/zend-mime",
@@ -4935,6 +4938,7 @@
                 "mock",
                 "xunit"
             ],
+            "abandoned": true,
             "time": "2017-08-03T14:08:16+00:00"
         },
         {
