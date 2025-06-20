@@ -156,13 +156,10 @@ class BaseFinalPrice
         );
         $tierPrice = $this->getTotalTierPriceExpression($price);
         $tierPriceExpr = $connection->getIfNullSql($tierPrice, $maxUnsignedBigint);
-        $finalPrice = $connection->getLeastSql(
-            [
+        $finalPrice = $connection->getIfNullSql($tierPrice, $connection->getLeastSql([
             $price,
             $specialPriceExpr,
-            $tierPriceExpr,
-            ]
-        );
+        ]));
 
         $select->join(
             ['cg' => $this->getTable('customer_group')],
@@ -215,7 +212,7 @@ class BaseFinalPrice
                 'pw.website_id',
                 'tax_class_id' => $taxClassId,
                 //orig_price in catalog_product_index_price_final_tmp
-                'price' => $connection->getIfNullSql($price, 0),
+                'price' => $connection->getIfNullSql($tierPrice, $connection->getIfNullSql($price, 0)),
                 //price in catalog_product_index_price_final_tmp
                 'final_price' => $connection->getIfNullSql($finalPrice, 0),
                 'min_price' => $connection->getIfNullSql($finalPrice, 0),
